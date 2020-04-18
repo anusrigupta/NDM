@@ -13,7 +13,7 @@ public class Automation extends Setup {
 		
 	System.out.println("swipe left worked");
 		
-		
+	//Swipe 3 times	
 		
 		
 		

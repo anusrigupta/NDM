@@ -41,19 +41,7 @@ public class Setup {
 		
 		
 		return driver;
-		
-		
-//******************    Wait for page to load and click Login   *********************
-		
-		
-				//MobileElement clickLogin = (MobileElement) (new WebDriverWait(Driver, 20)).until(ExpectedConditions.elementToBeClickable(By.linkText("Log in")));
 				
-				//clickLogin.click(); 
-				//System.out.println("clicked Login");
-		
-	
-		
-		
 		
 	}
 
