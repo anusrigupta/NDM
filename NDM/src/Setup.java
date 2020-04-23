@@ -15,6 +15,9 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class Setup {
 
+	static AndroidDriver<AndroidElement> driver;
+	
+	
 	public static AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException  {
 	
 
@@ -28,7 +31,7 @@ public class Setup {
 		Cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 		
 		URL url = new URL ("http://127.0.0.1:4723/wd/hub");
-		AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(url, Cap);
+		driver = new AndroidDriver<AndroidElement>(url, Cap);
 	
 		System.out.println("page loaded sucessfully");
 		

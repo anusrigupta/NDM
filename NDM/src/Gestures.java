@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
@@ -13,28 +14,22 @@ public class Gestures extends Setup{
 
 	public static void SwipeLeft() throws MalformedURLException {
 		
-		AndroidDriver<AndroidElement> driver = Capabilities();
+		//AndroidDriver<AndroidElement> driver = Capabilities();
 		
-//**************       Getting Device display screen resolution and applying swipe as per cordinates  ************************************
-		
-		Dimension size=driver.manage().window().getSize();
+//**************       Getting Device display screen resolution and applying swipe as per coordinates  ************************************
+		//if(Setup.driver == null)
+		//System.out.println("driver id null");
+		Dimension size = Setup.driver.manage().window().getSize();
 		int startx = (int)(size.width*11/12);
 		int starty = (int)(size.height/2);
 		int endx = (int)(size.width/12);
 		int endy =(int)(size.height/2);
 		
-		
 
-	//Waiting for 10 seconds	
-		try {
-			TimeUnit.SECONDS.sleep(10);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+	//Waiting for 1 seconds	
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 	//Swipe function i.e  Press -> <MoveTo -> Release and perform action 	
-		TouchAction touch = new AndroidTouchAction(driver);
+		TouchAction touch = new AndroidTouchAction(Setup.driver);
 
 		touch.press(PointOption.point(startx, starty)).moveTo(PointOption.point(endx, endy)).release().perform();
 		
