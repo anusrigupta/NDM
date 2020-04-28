@@ -12,7 +12,7 @@ import io.appium.java_client.touch.offset.PointOption;
 
 public class Gestures extends Setup{
 
-	public static void SwipeLeft() throws MalformedURLException {
+	public static void SwipeLeft() throws MalformedURLException, InterruptedException {
 		
 		//AndroidDriver<AndroidElement> driver = Capabilities();
 		
@@ -25,9 +25,8 @@ public class Gestures extends Setup{
 		int endx = (int)(size.width/12);
 		int endy =(int)(size.height/2);
 		
-
-	//Waiting for 1 seconds	
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		Thread.sleep(1000);
+		
 	//Swipe function i.e  Press -> <MoveTo -> Release and perform action 	
 		TouchAction touch = new AndroidTouchAction(Setup.driver);
 
