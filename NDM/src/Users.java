@@ -15,8 +15,10 @@ public class Users extends Setup{
 		System.out.println("selected the user");
 		
 		Thread.sleep(15000);
+		
 		driver.findElementByXPath("//android.widget.Button[@text='Select agreement']").click();
 		Thread.sleep(5000);
+		System.out.println("selected agreement");
 		
 		
 	}

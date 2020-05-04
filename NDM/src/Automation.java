@@ -11,18 +11,21 @@ public class Automation extends Setup {
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 	
 		//Open NDM - DK app Hybrid
-		
 		Setup.Capabilities();
 		
 		
 		//Swipe Thrice to get to Login page
-		for(int i=0;i<3;i++)
-		{
-		Gestures.SwipeLeft();      
-		}
+			for(int i=0;i<3;i++)
+			{
+				Gestures.SwipeLeft();      
+			}
+		//Login and select user and its agreement
+		LoginLogout.login();
 		
-
-	LoginLogout.login();
+		Thread.sleep(35000);
+		
+		Investments.SelectInvestmentMenu();
+		
 		
 	}
 

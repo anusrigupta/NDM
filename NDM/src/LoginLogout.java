@@ -30,12 +30,14 @@ public class LoginLogout extends Setup {
 		System.out.println("choosen user to login");
 
 		Thread.sleep(3000);
+		System.out.println("calling user");
 		Users.User593439922();
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
-		//driver.findElementById("dk.nordea.sme.alpha:id/ncc_button").click();
 		driver.findElementByXPath("//android.widget.Button[@text='Skip']").click();
+		
+		System.out.println("skipped it");
 		
 		
 		
